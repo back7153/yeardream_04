@@ -1,14 +1,25 @@
-# prac5.py
+# prac5
 
 class Zoo:
     def __init__(self):
-        pass
+        self.animal = {}
 
     def add_animal(self, animal):
-        pass
+        if animal not in self.animal.keys():
+            self.animal[animal.name] = animal.species
+        else:
+            print(f'{animal.name} the {animal.species}은 이미 동물원에 있습니다. 다른 이름을 사용하거나, 다른 종으로 추가해주세요.')
         
     def show_animals(self):
-        pass
+        print('현재 동물원에는 다음 동물들이 있습니다. :')
+        for name, species in self.animal.items():
+            print(f'{name} the {species}')
+
+    def show_animals_by_species(self, species):
+        for name, spec in self.animal.items():
+            if species == spec:
+                print(f'{name} the {spec}')
+
             
 class Animal:
     def __init__(self, name, species):
