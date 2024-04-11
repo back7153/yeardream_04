@@ -6,13 +6,14 @@ class Zoo:
 
     def add_animal(self, animal):
         pass
-
+        
     def show_animals(self):
         pass
-
+            
 class Animal:
     def __init__(self, name, species):
-        pass
+        self.name = name
+        self.species = species
 
 def main():
     # 동물원을 선언하고 10마리의 동물들을 추가합니다.
